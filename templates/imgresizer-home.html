@@ -1,0 +1,15 @@
+<h1>IMAGE RESIZER</h1>
+<p>Microservice to resize images</p>
+<br>
+<p>Request Parameters:<br>
+    img: [required] image to be resized (base64 string)<br>
+    width: desired width in pixels<br>
+    height: desired height in pixels</p>
+<br>
+<p>You must specify either a width or height in the request parameters.<br>
+If width is specified & height is not: returns img with specified width; height is calculated to preserve aspect ratio.<br>
+If height is specified & width is not: returns img with specified height; width is calculated to preserve aspect ratio.<br>
+If both width & height are specified: returns largest possible img (not to exceed specified dimensions) that preserves aspect ratio.</p>
+<br>
+<p>Response:<br>
+    base64: resized image (base64 string)</p>
